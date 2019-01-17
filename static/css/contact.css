@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {                             /*兼容IE6,7*/
+	*zoom: 1;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+body {
+	height: 5000px;
+	background-color: #f0f3ef;
+}
+
+
+.profile {
+	display: flex;
+	margin: 70px 0 115px;
+}
+.profile .add,
+.profile .tel,
+.profile .email {
+	flex: 1;
+	color: #333;
+	font-size: 20px;
+	padding: 50px 0 50px 105px;
+	border-color: #fff;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+.profile .add p:nth-child(2),
+.profile .tel p:nth-child(2),
+.profile .email p:nth-child(2) {
+	color: #666;
+	font-size: 14px;
+}
+.profile .tel {
+	margin: 0 20px;
+	padding-left: 140px;
+}
+.profile img {
+	position: absolute;
+	top: 46px;
+	left: 30px;
+}
+.message .message-t {
+	background-color: #f5f5f5;
+	padding: 34px 40px;
+}
+.message h4 {
+	text-align: center;
+	font-size: 30px;
+	color#333;
+}
+.message input {
+	display: block;
+	width: 448px;
+	padding: 18px 0 18px 25px;
+	font-size: 24px;
+	color: #999;
+}
+.message-t-l input[type="tel"] {
+	margin: 40px 0;
+}
+.message textarea {
+	width: 485px;
+	height: 261px;
+	background-color: #fff;
+	font-size: 24px;
+	color: #999;
+	padding-top: 18px;
+	padding-left: 25px;
+}
+.message .message-b input {
+ 	margin: 60px auto;
+ 	background-color: #5cc7f6;
+ 	color: #fff;
+ 	font-size: 36px;
+ 	padding: 15px 60px;
+}

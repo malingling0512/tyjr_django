@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>news center</title>
+	<!-- 引入头部样式文件 -->
+	<link rel="stylesheet" href="../static/css/header.css">
+	<!-- 引入人才招聘样式文件 -->
+	<link rel="stylesheet" href="../static/css/news.css">
+
+
+
+	<!-- 支持移动设备优先 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 引入css文件 -->
+	<link rel="stylesheet" href="../static/js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- 引入jQuery.js文件 -->
+	<script src="../static/js/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <!-- 引入bootstrap.js文件 -->
+	<script src="../static/js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            resizeHeader();
+            $(window).resize(resizeHeader);
+
+            function resizeHeader() {
+
+                var height = $(window).height();
+                $('header').css('height', height);
+            }
+            // 显示二维码页面
+            $("header .scan").mouseenter(function() {
+                $(this).children("img").stop().slideDown(200);
+            });
+            $("header .scan").mouseleave(function () {
+                $(this).children("img").stop().slideUp(200);
+            });
+           $(".news").each(function() {
+            	var target = $(this).find(".source");
+            	var text = $(this).find(".source").text();
+            	if (text=="官方新闻") {
+            		target.css("background-color","#2dbdf3");
+            	}else if (text=="媒体报道") {
+            		target.css("background-color","#ff9c00");
+            	}
+            });
+        });
+    </script>
+</head>
+<body>
+	<header>
+        <div class="container">
+            <nav class="clearfix">
+                <div class="logo">
+                    <img src="../static/images/logo.png" alt="">
+                </div>
+                <div class="shoutcut">
+                    <ul>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/about/">关于天一</a></li>
+                        <li><a href="/product/">业务范畴</a></li>
+                        <li><a href="/news">新闻中心</a></li>
+                        <li><a href="/job">人才招聘</a></li>
+                        <li><a href="/contact/">联系我们</a></li>
+                        <li class="scan">
+                            <a href="#">
+                                <img src="../static/images/二维码.png" alt="">扫码关注公众号
+                            </a>
+                            <img src="../static/images/二维码1.png" alt="" class="code">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>天一金融云服务</h1>
+            <p>TIANYI FINANCIAL CLOUD SERVICE</p>
+        </div>
+    </header>
+    <div class="content container">
+        {% for news in new_list %}
+    	    <div class="news">
+		    	<h4><a href="{% url 'new_detail' id=news.id %}">{{ news.title }}</a></h4>
+		    	<p>
+		    		<span class="source">{{ news.type }}</span>
+		    		<span>{{ news.time | date:'Y-m-d' }}</span>
+		    		<span><i class="fa fa-eye"></i>{{ news.views }}</span>
+		    	</p>
+		    	<div>
+		    		<div style="text-overflow:ellipsis;white-space:nowrap;overflow: hidden">{{ news.content }}</div>
+		    		<span class="read"><a href="/detail">《阅读全文》</a></span>
+		    	</div>
+    	    </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

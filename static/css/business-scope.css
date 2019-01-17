@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {                             /*兼容IE6,7*/
+	*zoom: 1;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.product-type {
+	padding-top: 48px;
+}
+
+.product-type h3 {
+	font-size: 52px;
+	color: #333;
+	text-align: center;
+	margin: 0;
+}
+.product-type h3:nth-child(2) {
+	color: #ddd;
+	font-weight: 700;
+	font-style: italic;
+	margin: 24px 0 40px;
+}
+.product-type-bd .row {
+	display: flex;
+} 
+.product-type-bd .row:nth-child(2) {
+    margin: 40px 0;
+}
+.product-type-bd .row .col {
+	flex: 1;
+	float: left;
+	padding-left: 70px;
+}
+
+.product-type-bd h4 {
+	font-size: 24px;
+	color: #003333;
+	margin: 25px 0;
+}
+.product-type-bd p {
+	font-size: 18px;
+	color: #444;
+	margin-bottom: 0;
+}
+.product-type-bd p:nth-child(4) {
+	padding: 14px 0;
+}
+.product-type-bd p:nth-child(5) {
+	color: #2dbcf3;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 网站优化标签title,description,keywords -->
+    <title>贵州天一金融</title>
+    <meta name="description" content="" />
+    <meta name="Keywords" content="" />
+    <!-- 引入ico图标 -->
+    <link rel="shortcut icon" href="bitbug_favicon.ico" type="image/x-icon" />
+    <!-- 引入头部样式文件 -->
+    <link rel="stylesheet" href="../static/css/header.css">
+    <!-- 引入首页样式文件 -->
+    <link rel="stylesheet" href="../static/css/index.css">
+    <!-- 支持移动设备优先 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 引入jQuery.js文件 -->
+    <script src="../static/js/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <!-- 引入bootstrap.js文h件 -->
+    <script src="../static/js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            resizeHeader();
+            $(window).resize(resizeHeader);
+
+            function resizeHeader() {
+
+                var height = $(window).height();
+                $('header').css('height', height);
+                $('.product').css('height', height);
+                $('.service').css('height', height);
+                $('.news').css('height', height);
+                $('footer').css('height', height * 0.2);
+
+            }
+
+            var conwid = $(".container").width();
+            var maxwid = $(window).width();
+            var right = (maxwid - conwid) / 2;
+            $(".footer-r").css("right", right);
+
+
+            // 显示二维码页面
+            $("header .scan").mouseenter(function() {
+                $(this).children("img").stop().slideDown(200);
+            });
+
+            $("header .scan").mouseleave(function() {
+                $(this).children("img").stop().slideUp(200);
+            });
+
+
+
+            //  产品页动画事件
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > $(window).height() / 3) {
+                    $(".product .pd-hd").css("visibility", "visible").css("padding-top", "70px");
+
+                    var t = setTimeout(time, 1000);
+
+                    function time() {
+                        $(".product > .pd-bd > div").eq(0).css("visibility", "visible").css("margin-top", "70px");
+                    }
+
+                    var t1 = setTimeout(time1, 2000);
+
+                    function time1() {
+                        $(".product > .pd-bd > div").eq(1).css("visibility", "visible").css("margin-top", "70px");
+                    }
+
+                    var t2 = setTimeout(time2, 3000);
+
+                    function time2() {
+                        $(".product > .pd-bd > div").eq(2).css("visibility", "visible").css("margin-top", "70px");
+                    }
+                }
+            });
+
+
+            $('header').click(function(event) {
+                $("#id_click_product")[0].click();
+            });
+            $('.product').click(function(event) {
+                $("#id_click_service")[0].click();
+            });
+            $('.service').click(function(event) {
+                $("#id_click_news")[0].click();
+            });
+            $('.news').click(function(event) {
+                $("#id_click_footer")[0].click();
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="clearfix">
+                <div class="logo">
+                    <img src="../static/images/logo.png" alt="">
+                </div>
+                <div class="shoutcut">
+                    <ul>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/about/">关于天一</a></li>
+                        <li><a href="product">业务范畴</a></li>
+                        <li><a href="/news">新闻中心</a></li>
+                        <li><a href="/job">人才招聘</a></li>
+                        <li><a href="/contact/">联系我们</a></li>
+                        <li class="scan">
+                            <a href="#">
+                                <img src="../static/images/二维码.png" alt="">扫码关注公众号
+                            </a>
+                            <img src="../static/images/二维码1.png" alt="" class="code">
+                            <a href="#id_product" id="id_click_product">&nbsp</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>天一金融云服务</h1>
+            <p>TIANYI FINANCIAL CLOUD SERVICE</p>
+        </div>
+    </header>
+    <a href="" id="id_product">&nbsp</a>
+    <div class="product container">
+        <div class="pd-hd">
+            <h3>产品业务</h3>
+            <h3>product business</h3>
+        </div>
+        <div class="pd-bd">
+            <div>
+                <img src="../static/images/pd1.png" alt="">
+                <h4>房抵押贷款</h4>
+                <p>住房抵押贷款是银行为保证贷款的安全，把借款人的房地产，有假证券及其他凭证，通过一定的契约合同，合法取得队借款人财产的留置权和质押权而向其提供的一种贷款。</p>
+                <p>住房抵押贷款拥有利率低，额度高，门槛低，时效快，还款易，全程免费咨询和服务等等优势。</p>
+            </div>
+            <div>
+                <img src="../static/images/pd2.png" alt="">
+                <h4>车抵押贷款</h4>
+                <p>汽车抵押贷款是易借款人或第三人的汽车或自购车作为抵押物想金融机构或汽车消费贷款公司取得的贷款。以汽车作为抵押物的贷款的用途,主要为快速资金周转。</p>
+                <p>车抵押贷拥有利率省，额度高，区域广等等优势。</p>
+            </div>
+            <div>
+                <img src="../static/images/pd3.png" alt="">
+                <h4>信用贷</h4>
+                <p>信用贷款是指以借款人的信誉发放的贷款，借款人不需要提供担保。其特征就是债务人无需提供抵押品或第三方担保仅凭自己的信誉就能取得贷款，并以借款人信用程度作为还款保证的。</p>
+                <p>信用贷拥有利率省，额度高，门槛低，区域广等等优势。</p>
+            </div>
+        </div>
+        <a href="product" id="id_click_service">&nbsp</a>
+    </div>
+    <a href="" id="id_service">&nbsp</a>
+    <div class="service">
+        <img src="../static/images/scope.gif" alt="">
+        <h3>业务范围</h3>
+        <h3>BUSINESS SCOPE</h3>
+        <a href="#id_news" id="id_click_news">&nbsp</a>
+    </div>
+    <a href="" id="id_news">&nbsp</a>
+    <div class="news">
+        <h3>新闻中心</h3>
+        <h3>news center</h3>
+            <div style="margin: auto">
+            <video width="1200px" height="750px" autoplay="1">
+                <source src="../static/video/biaozhang.mp4" >
+            </video>
+            </div>
+        <a href="#id_footer" id="id_click_footer">&nbsp</a>
+    </div>
+    <a href="" id="id_footer">&nbsp</a>
+    <footer>
+        <div class="container">
+            <div class="footer-l">
+                <p>联系我们</p>
+                <p>电话:400-688-9700</p>
+                <p>地址:贵州省贵阳市云岩区北京路鑫都大厦27楼</p>
+            </div>
+            <div class="footer-r">
+                <img src="../static/images/二维码1.png" alt="">
+                <p>扫描关注微信公众号</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

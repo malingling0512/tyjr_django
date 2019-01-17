@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>天一金融-人才招聘</title>
+    <!-- 引入头部样式文件 -->
+    <link rel="stylesheet" href="../static/css/header.css">
+    <!-- 引入人才招聘样式文件 -->
+    <link rel="stylesheet" href="../static/css/recruit.css">
+
+
+    <!-- 支持移动设备优先 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 引入jQuery.js文件 -->
+    <script src="../static/js/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <!-- 引入bootstrap.js文件 -->
+	<script src="../static/js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            resizeHeader();
+            $(window).resize(resizeHeader);
+
+            function resizeHeader() {
+
+                var height = $(window).height();
+                $('header').css('height', height);
+
+            }
+            // 显示二维码页面
+            $("header .scan").mouseenter(function() {
+                $(this).children("img").stop().slideDown(200);
+            });
+            $("header .scan").mouseleave(function() {
+                $(this).children("img").stop().slideUp(200);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="clearfix">
+                <div class="logo">
+                    <img src="../static/images/logo.png" alt="">
+                </div>
+                <div class="shoutcut">
+                    <ul>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/about/">关于天一</a></li>
+                        <li><a href="/product/">业务范畴</a></li>
+                        <li><a href="/news">新闻中心</a></li>
+                        <li><a href="/job">人才招聘</a></li>
+                        <li><a href="/contact/">联系我们</a></li>
+                        <li class="scan">
+                            <a href="#">
+                                <img src="../static/images/二维码.png" alt="">扫码关注公众号
+                            </a>
+                            <img src="../static/images/二维码1.png" alt="" class="code">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>天一金融云服务</h1>
+            <p>TIANYI FINANCIAL CLOUD SERVICE</p>
+        </div>
+    </header>
+
+    <div class="recruit container">
+        <div class="row1 clearfix">
+            <div class="row1-l fl">
+                <h4>WEB前段开发人员</h4>
+                <p class="time">2018-12-13 <i class="fa fa-eye"></i> 12818</p>
+                <div class="demand">
+                    <p>1、要求</p>
+                    <p>
+                        <span class="circle">1</span>&nbsp熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">2</span>&nbsp两年工作经验
+                    </p>
+                </div>
+            </div>
+            <div class="row1-r fr">
+                <span class="state">该职位已关闭</span>
+                <span class="number">2人</span>
+                <p class="extend">
+                    《展开全文》
+                </p>
+            </div>
+        </div>
+        <div class="row2 clearfix">
+            <div class="row2-l fl">
+                <h4>WEB前段开发人员</h4>
+                <p class="time">2018-12-13 <i class="fa fa-eye"></i> 12818</p>
+                <div class="demand">
+                    <p>1、要求</p>
+                    <p>
+                        <span class="circle">1</span>&nbsp熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">2</span>&nbsp两年工作经验
+                    </p>
+                </div>
+            </div>
+            <div class="row2-r fr">
+                <span class="state">招聘中</span>
+                <span class="number">2人</span>
+                <p class="extend">
+                    《展开全文》
+                </p>
+            </div>
+        </div>
+        <div class="row3 clearfix">
+            <div class="row3-l fl">
+                <h4>WEB前段开发人员</h4>
+                <p class="time"><span>2018-12-13</span> <span><i class="fa fa-eye"></i> 12818</span></p>
+                <div class="demand">
+                    <p>1、要求</p>
+                    <p>
+                        <span class="circle">1</span>&nbsp熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">2</span>&nbsp两年工作经验
+                    </p>
+                </div>
+            </div>
+            <div class="row3-r fr">
+                <span class="number">2人</span>
+                <p class="extend">《展开全文》</p>
+            </div>
+        </div>
+        <div class="row4 clearfix">
+            <div class="row4-l fl">
+                <h4>WEB前段开发人员</h4>
+                <p class="time">2018-12-13 <i class="fa fa-eye"></i> 12818</p>
+                <div class="demand">
+                    <p>1、要求</p>
+                    <p>
+                    	<span class="circle">1</span>&nbsp熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">2</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">3</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">4</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">5</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">6</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">7</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">8</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发<br />
+                        <span class="circle">9</span>&nbsp两年工作经验1熟悉微信小程序开发、公众号开发
+                    </p>
+                </div>
+            </div>
+            <div class="row4-r fr">
+                <span class="number">2人</span>
+                <p class="extend">
+                    《收起》
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="next">
+        <ul class="pagination">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#" class="omit">...</a></li>
+            <li><a href="#">17</a></li>
+            <li><a href="#">Next</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

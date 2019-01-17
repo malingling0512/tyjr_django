@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {                             /*兼容IE6,7*/
+	*zoom: 1;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+/*产品业务部分*/
+.product {
+	background: url(../images/bg1.png) -22px 0 no-repeat;
+	overflow: hidden;
+	/*visibility: hidden;*/
+	/*padding-top: 70px;*/
+}
+.product .pd-hd {
+	padding-top: 300px;
+	visibility: hidden;
+	transition: all 1s;
+}
+.product h3 {
+	font-size: 52px;
+	color: #666;
+	text-align: center;
+}
+.product h3:nth-child(2) {
+	color: #ccc;
+	font-weight: 700;
+	font-style: italic;
+	margin-top: 23px;
+}
+.product .pd-bd {
+	margin: 0 auto;
+	display: flex;
+	overflow: hidden;
+}
+.product .pd-bd div {
+	float: left;
+	flex: 1;
+	text-align: center;
+	background-color: #fff; 
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	padding: 0 30px;
+	visibility: hidden;
+    transition: all 1s;
+    margin-top: 300px;
+}
+.product div:nth-child(2) {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.product .pd-bd div:nth-child(1) {
+	border: 1px solid #56bef5;
+	padding-bottom: 105px;
+}
+.product h4 {
+	color: #333;
+	font-size: 24px;
+	padding: 14px 0 37px;
+}
+.product p {
+	color: #555;
+	font-size: 16px;
+	text-align: left;
+}
+.product div p:nth-child(4) {
+	margin-top: 34px;
+}
+
+/*业务范围部分*/
+.service {
+	position: relative;
+	overflow: hidden;
+}
+.service > img {
+	height: 100%;
+    width: 100%;
+}
+.service h3 {
+	font-size: 52px;
+	color: #333;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 70px;
+}
+.service h3:nth-child(3) {
+	color: #ccc;
+	font-style: italic;
+	font-weight: 700;
+	top: 146px;
+}
+/*新闻中心部分*/
+.news {
+	text-align: center;
+	overflow: hidden;
+	padding-top: 70px;
+}
+.news h3 {
+	color: #333;
+	font-size: 52px;
+}
+.news h3:nth-child(2) {
+	color: #ccc;
+	font-weight: 700;
+	font-style: italic;
+}
+/*页面底部分*/
+footer {
+	background-color: #22b1f2;
+	color: #e0e0e0;
+	font-size: 14px;
+	position: relative;
+}
+.footer-l {
+	float: left;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.footer-l p:nth-child(1) {
+	font-size: 18px;
+}
+.footer-r {
+	float: right;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+.footer-r img {
+	display: block;
+	margin: 0 auto;
+}
+

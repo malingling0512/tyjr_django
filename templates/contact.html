@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天一金融-联系我们</title>
+	<!-- 引入头部样式文件 -->
+	<link rel="stylesheet" href="../static/css/header.css">
+	<!-- 引入人才招聘样式文件 -->
+	<link rel="stylesheet" href="../static/css/contact.css">
+
+
+
+	<!-- 支持移动设备优先 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 引入css文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- 引入jQuery.js文件 -->
+	<script src="../static/js/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <!-- 引入bootstrap.js文件 -->
+	<script src="../static/js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            resizeHeader();
+            $(window).resize(resizeHeader);
+            function resizeHeader() {
+                var height = $(window).height();
+                $('header').css('height', height);
+
+            }
+            // 显示二维码页面
+            $("header .scan").mouseenter(function() {
+                $(this).children("img").stop().slideDown(200);
+            });
+            $("header .scan").mouseleave(function () {
+                $(this).children("img").stop().slideUp(200);
+            });
+        });
+    </script>
+</head>
+<body>
+	<header>
+        <div class="container">
+            <nav class="clearfix">
+                <div class="logo">
+                    <img src="../static/images/logo.png" alt="">
+                </div>
+                <div class="shoutcut">
+                    <ul>
+                        <li><a href="/">首页</a></li>
+                        <li><a href="/about/">关于天一</a></li>
+                        <li><a href="/product/">业务范畴</a></li>
+                        <li><a href="/news">新闻中心</a></li>
+                        <li><a href="/job">人才招聘</a></li>
+                        <li><a href="/contact/">联系我们</a></li>
+                        <li class="scan">
+                            <a href="#">
+                                <img src="../static/images/二维码.png" alt="">扫码关注公众号
+                            </a>
+                            <img src="../static/images/二维码1.png" alt="" class="code">
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h1>天一金融云服务</h1>
+            <p>TIANYI FINANCIAL CLOUD SERVICE</p>
+        </div>
+    </header>
+    <div class="profile container">
+    	<div class="add fl">
+    		<p>公司地址</p>
+    		<p>贵阳市云岩区北京路鑫都大厦27楼</p>
+    		<img src="../static/images/pro1.png" alt="">
+    	</div>
+    	<div class="tel fl">
+    		<p>公司电话</p>
+    		<p>400-688-9700</p>
+    		<img src="../static/images/pro2.png" alt="">
+    	</div>
+    	<div class="email fl">
+    		<p>公司邮箱</p>
+    		<p>guizhoutyjr.onliyun.com</p>
+    		<img src="../static/images/pro3.png" alt="">
+    	</div>
+
+    </div>
+    <div class="message container">
+        <form id="myForm" action="/contact/" method="get">
+    	    <div class="message-t clearfix">
+    	    	<h4>留言</h4>
+    	    	<div class="message-t-l fl">
+    	    		    <input type="text" placeholder="姓名：请输入您的真实姓名">
+    	    		    <input type="tel" placeholder="姓名：请输入您的电话号码">
+                        <input type="email" placeholder="姓名：请输入您的邮箱">
+    	    	</div>
+    	    	<textarea name="" id="" cols="30" rows="10" class="fr" placeholder="留言：请留下您的宝贵意见"></textarea>
+    	    </div>
+    	    <div class="message-b">
+    	    	<input id="subbtn" type="button" onclick="formSubmit()" value="提交">
+    	    </div>
+        </form>
+    </div>
+</body>
+</html>

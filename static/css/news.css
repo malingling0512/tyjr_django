@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {                             /*兼容IE6,7*/
+	*zoom: 1;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+body {
+	height: 5000px;
+	background-color: #f0f3ef;
+}
+
+
+
+.content {
+	margin-top: 30px;
+}
+.content .news {
+	padding: 32px;
+	background-color: #fff;
+	margin-bottom: 24px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+.content h4 {
+	color: #333;
+	font-size: 24px;
+}
+.content p {
+	font-size: 14px;
+	color: #999;
+}
+.content p:last-child {
+	color: #333;
+}
+.content p:nth-child(2) {
+	margin: 7px 0 15px;
+}
+.content p:nth-child(2) span {
+	margin-right: 13px;
+}
+.content .news .source {
+	color: #fff;
+	text-align: center;
+	padding: 6px;
+}
+.content .news i {
+	margin-right: 6px;
+}
+.content .news .read {
+	float: right;
+	color: #9cdbf8;
+}

@@ -1,0 +1,55 @@
+header {
+	overflow: hidden;
+	background: url(../images/bg.png) no-repeat -36px 0; 
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+.logo {
+	float: left;
+	margin-top: 15px;
+}
+header .shoutcut {
+	float: right;
+	margin-top: 30px;
+}
+.shoutcut li {
+	float: left;
+	padding: 0 21px;
+}
+.shoutcut .scan {
+	position: relative;
+}
+.shoutcut li a {
+	font-size: 16px;
+	color:  #fff;
+	transition: all 0.2s;    /*过渡*/
+}
+.shoutcut li a:hover {
+    color: #bee5ff;
+    text-decoration: none;
+}
+.shoutcut li a:visited {
+	 text-decoration: none;
+}
+.shoutcut img {
+	margin-right: 8px;
+}
+header .code {
+	position: absolute;
+    top: 22px;
+    left: 50px;
+    display: none;
+}
+header h1 {
+	font-size: 105px;
+	color: rgba(246,252,255,0.86);
+	text-align: center;
+	margin: 320px 0 37px;
+	font-weight: normal;
+}
+header p {
+	font-size: 42px;
+	color: rgba(194,234,255,0.86);
+	text-align: center;
+}

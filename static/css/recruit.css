@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {                             /*兼容IE6,7*/
+	*zoom: 1;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+body {
+	height: 5000px;
+	background-color: #f0f3ef;
+}
+.recruit .row1,
+.recruit .row2,
+.recruit .row3,
+.recruit .row4 {
+	margin-top: 20px;
+	background-color: #fff;
+	padding: 30px 30px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+.recruit h4 {
+    font-size: 24px;
+    color: #333;
+}
+.recruit .time {
+	color: #999;
+	font-size: 14px;
+}
+.recruit .time i {
+	margin-left: 15px;
+}
+.recruit .demand {
+	color: #333;
+	font-size: 14px;
+}
+.recruit .demand .circle {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	border: 1px solid #333;
+	border-radius: 50%;
+	text-align: center;
+}
+.recruit .state {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid rgb(229,58,57);
+	color: #e53a3a;
+	font-size: 13px;
+	padding: 0 10px;
+	margin-right: 8px;
+}
+.recruit .number {
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #2dbdf3;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+}
+.recruit .extend {
+	font-size: 14px;
+	color: #3ac1f4;
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+}
+.next {
+	text-align: center;
+	margin-top: 30px;
+}
+div.next li a {
+	color: #333; 
+	margin: 0 10px;
+	background-color: #fdfdfd;
+}
+div.next li a:hover {
+	border: 1px solid #337ab7;
+	color: #337ab7;
+	background-color: #fff;
+}
+.next li .omit {
+	border: none;
+}
